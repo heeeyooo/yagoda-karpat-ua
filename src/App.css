@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic");
+@import url("https://fonts.googleapis.com/css?family=Corben:regular,700");
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --color-light: #ffffff;
+    --color-dark: #4c7766;
+    --color-active: #c9dd13;
+    --main-font-family: "Montserrat", serif;
+    --secondary-font-family: "Montserrat", serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: var(--main-font-family);
+    background-color: var(--color-light);
+    min-height: 100vh;
+    color: var(--color-dark);
+}
+
+.body--active {
+    height: 100% !important;
+    overflow: hidden !important;
+}
+
+#root {
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: none;
+}
