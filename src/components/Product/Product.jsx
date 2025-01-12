@@ -12,11 +12,13 @@ const Product = ({ product }) => {
     const {
         id,
         productContainer,
-        title,
+        name,
+        latName,
         info,
         pack,
         temp,
         origin,
+        status,
         productImages,
         classSwiper,
         infoContainer,
@@ -64,19 +66,18 @@ const Product = ({ product }) => {
             <div id={id} className={productContainer}>
                 <div className={infoContainer}>
                     <a href={`#${id}`} className="product-name">
-                        {title}
+                        {name}
                     </a>
-                    <p className="product-info">{info}</p>
+                    <p className="product__lat-name">{latName}</p>
                     <ul className="product-list-info">
                         <li className="pack">Пакування: {pack}</li>
                         <li className="temp">Температура: {temp}</li>
                         <li className="origin">Походження: {origin}</li>
+                        <li className="status">Статус: {status}</li>
                     </ul>
-                    {/* <div className="contact-us-btn-container-product"> */}
                     <a className="contact-us-btn product-btn" href="#section4">
-                        Зв'яжіться з нами
+                        Дізнатися про наявність
                     </a>
-                    {/* </div> */}
                 </div>
                 <Swiper
                     grabCursor={true}
@@ -104,7 +105,11 @@ const Product = ({ product }) => {
                     {productImages.map((productImage, index) => {
                         return (
                             <SwiperSlide key={index}>
-                                <img src={productImage} alt={title} />
+                                <img
+                                    loading="lazy"
+                                    src={productImage}
+                                    alt={name}
+                                />
                             </SwiperSlide>
                         );
                     })}

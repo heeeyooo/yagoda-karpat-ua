@@ -99,7 +99,7 @@ const AboutUs = () => {
                 овочів. Вся наша продукція вирощена та зібрана виключно в
                 екологічно чистих районах України.
             </p>
-            <img className="ukraine-map" src={map} alt="map" />
+            <img className="ukraine-map" loading="lazy" src={map} alt="map" />
             <div className="contacts-grid-container">
                 <div>
                     <span id="years">0</span>

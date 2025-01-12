@@ -32,7 +32,12 @@ const Footer = () => {
             </a>
             <div className="certificate-container">
                 <p className="certificate-info">Наші сертифікати</p>
-                <img className="certificate-img" src={organicImg} alt="" />
+                <img
+                    className="certificate-img"
+                    loading="lazy"
+                    src={organicImg}
+                    alt=""
+                />
             </div>
             <hr />
             <div className="footer-nav-container">
@@ -104,7 +109,7 @@ const Footer = () => {
                                     return (
                                         <li key={product.id}>
                                             <a href={"#" + product.id}>
-                                                {product.title}
+                                                {product.name}
                                             </a>
                                         </li>
                                     );
@@ -138,7 +143,7 @@ const Footer = () => {
                                     return (
                                         <li key={product.id}>
                                             <a href={"#" + product.id}>
-                                                {product.title}
+                                                {product.name}
                                             </a>
                                         </li>
                                     );
@@ -172,7 +177,7 @@ const Footer = () => {
                                     return (
                                         <li key={product.id}>
                                             <a href={"#" + product.id}>
-                                                {product.title}
+                                                {product.name}
                                             </a>
                                         </li>
                                     );
@@ -206,7 +211,7 @@ const Footer = () => {
                                     return (
                                         <li key={product.id}>
                                             <a href={"#" + product.id}>
-                                                {product.title}
+                                                {product.name}
                                             </a>
                                         </li>
                                     );
@@ -219,7 +224,7 @@ const Footer = () => {
             <div className="footer__rights-creator">
                 <p className="rights">© 2024 Ягода Карпат</p>
                 <p className="creator">
-                    Made with <i class="fa-regular fa-heart"></i> by{" "}
+                    Made with <i className="fa-regular fa-heart"></i> by{" "}
                     <a
                         href="https://stepandordiai.netlify.app/"
                         target="_blank"

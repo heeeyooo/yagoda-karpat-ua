@@ -157,7 +157,7 @@ const NavCurtain = () => {
                         </button>
                         <div className="grid-container">
                             <ul className="dropdown-content">
-                                {productsData.map(({ id, title }) => {
+                                {productsData.map(({ id, name }) => {
                                     return (
                                         <li key={id}>
                                             <a
@@ -165,7 +165,7 @@ const NavCurtain = () => {
                                                 onClick={blurMiniLink}
                                                 href={"#" + id}
                                             >
-                                                {title}
+                                                {name}
                                             </a>
                                         </li>
                                     );

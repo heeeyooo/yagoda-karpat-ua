@@ -1,18 +1,8 @@
-import bilberryIcon from "/img/icons/bilberry-icon.png";
-import lingonberryIcon from "/img/icons/lingonberry-icon.png";
-import elderberryIcon from "/img/icons/elderberry-icon.png";
-import raspberryIcon from "/img/icons/raspberry-icon.png";
-import strawberryIcon from "/img/icons/strawberry-icon.png";
-import plumIcon from "/img/icons/plum-icon.png";
-import boletusIcon from "/img/icons/boletus-icon.png";
-import chanterelleIcon from "/img/icons/chanterelle-icon.png";
-import rosehipIcon from "/img/icons/rosehip-icon.png";
-import sweetPepperIcon from "/img/icons/sweet-pepper.png";
-import apricotIcon from "/img/icons/apricot-icon.png";
 import homeVideo from "./img/home-video.mp4";
-import "./Home.css";
+import { productsData } from "../../data/productsData";
 import "./../../components/Header/Header.css";
 import "./../../components/BurgerBtn/BurgerBtn.css";
+import "./Home.css";
 
 const Home = () => {
     addEventListener("scroll", () => {
@@ -43,7 +33,6 @@ const Home = () => {
                 loop
                 playsInline
                 muted
-                // controls
             ></video>
             <div className="home-container__wrapper">
                 <div>
@@ -55,47 +44,28 @@ const Home = () => {
                         та овочі
                     </p>
                 </div>
-
-                {/* <div className="contact-us-btn-container"> */}
                 <a className="contact-us-btn" href="#section4">
                     Зв'яжіться з нами
                 </a>
-                {/* </div> */}
             </div>
             <div className="home-container__product-wrapper">
-                <a href="#bilberry">
-                    <img src={bilberryIcon} alt="Bilberry" />
-                </a>
-                <a href="#lingonberry">
-                    <img src={lingonberryIcon} alt="" />
-                </a>
-                <a href="#elderberry">
-                    <img src={elderberryIcon} alt="" />
-                </a>
-                <a href="#rosehip">
-                    <img src={rosehipIcon} alt="" />
-                </a>
-                <a href="#strawberry">
-                    <img src={strawberryIcon} alt="" />
-                </a>
-                <a href="#raspberry">
-                    <img src={raspberryIcon} alt="" />
-                </a>
-                <a href="#plum">
-                    <img src={plumIcon} alt="" />
-                </a>
-                <a href="#sweet-pepper">
-                    <img src={sweetPepperIcon} alt="" />
-                </a>
-                <a href="#boletus">
-                    <img src={boletusIcon} alt="" />
-                </a>
-                <a href="#chanterelle">
-                    <img src={chanterelleIcon} alt="" />
-                </a>
-                <a href="#apricot">
-                    <img src={apricotIcon} alt="" />
-                </a>
+                {productsData.map((product) => {
+                    return (
+                        <a
+                            className={product.imgNone}
+                            key={product.id}
+                            href={"#" + product.id}
+                            data-title={product.name}
+                        >
+                            <img
+                                className={product.imgNone}
+                                loading="lazy"
+                                src={product.icon}
+                                alt={product.name}
+                            />
+                        </a>
+                    );
+                })}
             </div>
         </div>
     );

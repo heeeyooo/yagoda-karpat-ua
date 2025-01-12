@@ -20,7 +20,7 @@
 
 .product-name {
     position: relative;
-    font-size: clamp(20px, 3vw, 30px);
+    font-size: clamp(24px, 3vw, 36px);
     font-weight: 700;
     margin: 0;
 }
@@ -34,6 +34,10 @@
 
 .product-name:hover::after {
     opacity: 1;
+}
+
+.product__lat-name {
+    padding: 10px 0;
 }
 
 .product-info {
@@ -58,8 +62,7 @@ img {
 .product-list-info {
     font-family: var(--secondary-font-family);
     list-style-position: inside;
-    padding: 0;
-    font-weight: 500;
+    padding: 0 0 10px;
 }
 
 .product-list-info li::marker {
@@ -73,36 +76,14 @@ img {
     bottom: 0;
 }
 
-.contact-us-btn-product {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 10px;
-    font-size: 24px;
-    width: 180px;
-    height: 40px;
-    border-radius: 25px;
-}
-
-.contact-us-btn-product::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    transform: scaleX(0);
-    background-color: #c9dd1380;
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-    border-radius: 25px;
-    z-index: -1;
-}
-
 .product-btn {
     bottom: 0;
+    font-weight: 500;
 }
 
 .product-btn::before {
     background: var(--color-dark);
+    height: 2px;
 }
 
 .contact-us-btn-container-product:hover .contact-us-btn-product::before {
@@ -210,7 +191,7 @@ img {
     }
     .product-info-container,
     .product-info-container-1 {
-        padding: 10px;
+        padding: 25px;
     }
     .contact-us-btn-container-product {
         right: 25px;
