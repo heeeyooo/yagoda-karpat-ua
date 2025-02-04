@@ -1,4 +1,4 @@
-import "./Contacts.css";
+import "./Contacts.scss";
 
 const Contacts = () => {
     function moveUpLabel(labelName) {

@@ -1,5 +1,5 @@
 import { productsData } from "../../data/productsData";
-import "./Footer.css";
+import "./Footer.scss";
 import organicImg from "./img/certificates/organic-logo.jpg";
 
 const Footer = () => {

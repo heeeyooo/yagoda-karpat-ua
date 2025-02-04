@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import "./AboutUs.css";
 import map from "/ukraine.svg";
+import "./AboutUs.scss";
 
 const AboutUs = () => {
     useEffect(() => {

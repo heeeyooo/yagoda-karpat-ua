@@ -59,10 +59,6 @@
     opacity: 0 !important;
 }
 
-.menu--active {
-    transform: translateX(0%) !important;
-}
-
 .home--active {
     animation: revealLink 0.5s 0.3s forwards !important;
     transform: translateX(50px);

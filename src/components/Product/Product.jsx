@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css/bundle";
-import "./Product.css";
 
 // import required modules
 import { EffectCreative, Pagination, Navigation } from "swiper/modules";
+import "./Product.scss";
 
 const Product = ({ product }) => {
     const {

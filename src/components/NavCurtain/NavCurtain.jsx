@@ -1,5 +1,5 @@
 import { productsData } from "../../data/productsData";
-import "./NavCurtain.css";
+import "./NavCurtain.scss";
 
 const NavCurtain = () => {
     addEventListener("scroll", () => {

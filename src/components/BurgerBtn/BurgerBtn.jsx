@@ -1,4 +1,4 @@
-import "./BurgerBtn.css";
+import "./BurgerBtn.scss";
 
 const BurgerBtn = () => {
     function setNav() {

@@ -1,4 +1,3 @@
-import "./App.css";
 import BurgerBtn from "./components/BurgerBtn/BurgerBtn";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -8,6 +7,7 @@ import Contacts from "./pages/Contacts/Contacts";
 import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import "./App.scss";
 
 function App() {
     return (

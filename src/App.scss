@@ -1,0 +1,33 @@
+@use "./reset" as *;
+@use "./fonts" as *;
+@use "./variables" as *;
+
+html {
+    scroll-behavior: smooth;
+}
+
+// ::-webkit-scrollbar {
+//     display: none;
+// }
+
+body {
+    font-family: var(--main-font-family);
+    /* background: var(--color-light); */
+    background: rgb(221, 249, 205);
+    min-height: 100vh;
+    color: #000;
+    overflow: hidden;
+}
+
+.body--active {
+    height: 100% !important;
+    overflow: hidden !important;
+}
+
+#root {
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: none;
+}

@@ -1,8 +1,8 @@
 import homeVideo from "./img/home-video.mp4";
 import { productsData } from "../../data/productsData";
-import "./../../components/Header/Header.css";
-import "./../../components/BurgerBtn/BurgerBtn.css";
-import "./Home.css";
+import "./../../components/Header/Header.scss";
+import "./../../components/BurgerBtn/BurgerBtn.scss";
+import "./Home.scss";
 
 const Home = () => {
     addEventListener("scroll", () => {
