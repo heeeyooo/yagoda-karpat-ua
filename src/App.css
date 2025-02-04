@@ -27,9 +27,11 @@ html {
 
 body {
     font-family: var(--main-font-family);
-    background: var(--color-light);
+    /* background: var(--color-light); */
+    background: rgb(221, 249, 205);
     min-height: 100vh;
-    color: var(--color-dark);
+    color: #000;
+    overflow: hidden;
 }
 
 .body--active {

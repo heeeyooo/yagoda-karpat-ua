@@ -1,14 +1,27 @@
+.product-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .product-container {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 100%;
-    min-height: 100vh;
+    width: calc(100% - 100px);
+    min-height: calc(100vh - 100px);
+    background: white;
+    border-radius: 25px;
 }
 
-.product-container1 {
+.product-wrapper:nth-child(2) {
+    flex-direction: row;
+}
+
+/* .product-container1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +29,7 @@
     width: 100%;
     min-height: 100vh;
     box-sizing: border-box;
-}
+} */
 
 .product-name {
     position: relative;
@@ -92,33 +105,24 @@ img {
 }
 
 /* SWIPER */
-
+/* 
 .my-swiper {
     transform: translateX(-25px);
     opacity: 0;
-}
+} */
 
-.active {
+/* .active {
     transform: translateX(0) !important;
     opacity: 1 !important;
     transition: transform 1s ease, opacity 0.5s ease;
-}
+} */
 
-.my-swiper-1 {
+/* .my-swiper-1 {
     transform: translateX(25px);
     opacity: 0;
-}
+} */
 
 .product-info-container {
-    transform: translateX(25px);
-    opacity: 0;
-    width: 50%;
-    padding: 0 25px;
-}
-
-.product-info-container-1 {
-    transform: translateX(-25px);
-    opacity: 0;
     width: 50%;
     padding: 0 25px;
 }
@@ -167,15 +171,15 @@ img {
 }
 
 @media screen and (width < 1000px) {
-    .product-info-container,
-    .product-info-container-1 {
+    .product-info-container {
         width: 100%;
         padding: 50px;
     }
 
-    .product-container,
-    .product-container1 {
+    .product-container {
         flex-direction: column-reverse;
+        width: calc(100% - 50px);
+        min-height: calc(100vh - 50px);
     }
 
     .swiper {
@@ -185,12 +189,10 @@ img {
 }
 
 @media screen and (max-width: 900px) {
-    .product-container,
-    .product-container1 {
+    .product-container {
         justify-content: flex-end;
     }
-    .product-info-container,
-    .product-info-container-1 {
+    .product-info-container {
         padding: 25px;
     }
     .contact-us-btn-container-product {

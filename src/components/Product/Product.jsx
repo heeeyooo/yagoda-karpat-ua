@@ -62,9 +62,9 @@ const Product = ({ product }) => {
     });
 
     return (
-        <>
-            <div id={id} className={productContainer}>
-                <div className={infoContainer}>
+        <div className="product-wrapper" id={id}>
+            <div className="product-container">
+                <div className="product-info-container">
                     <a href={`#${id}`} className="product-name">
                         {name}
                     </a>
@@ -115,7 +115,7 @@ const Product = ({ product }) => {
                     })}
                 </Swiper>
             </div>
-        </>
+        </div>
     );
 };
 

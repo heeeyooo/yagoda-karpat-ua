@@ -26,14 +26,14 @@ const Home = () => {
 
     return (
         <div className="home-container js-home-container" id="section1">
-            <video
+            {/* <video
                 className="home-video"
                 src={homeVideo}
                 autoPlay
                 loop
                 playsInline
                 muted
-            ></video>
+            ></video> */}
             <div className="home-container__wrapper">
                 <div>
                     <h1 className="home-main-info">
