@@ -47,25 +47,25 @@ const Home = () => {
                 <a className="contact-us-btn" href="#section4">
                     Зв'яжіться з нами
                 </a>
-            </div>
-            <div className="home-container__product-wrapper">
-                {productsData.map((product) => {
-                    return (
-                        <a
-                            className={product.imgNone}
-                            key={product.id}
-                            href={"#" + product.id}
-                            data-title={product.name}
-                        >
-                            <img
+                {/* <div className="home-container__product-wrapper">
+                    {productsData.map((product) => {
+                        return (
+                            <a
                                 className={product.imgNone}
-                                loading="lazy"
-                                src={product.icon}
-                                alt={product.name}
-                            />
-                        </a>
-                    );
-                })}
+                                key={product.id}
+                                href={"#" + product.id}
+                                data-title={product.name}
+                            >
+                                <img
+                                    className={product.imgNone}
+                                    loading="lazy"
+                                    src={product.icon}
+                                    alt={product.name}
+                                />
+                            </a>
+                        );
+                    })}
+                </div> */}
             </div>
         </div>
     );

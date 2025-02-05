@@ -17,6 +17,8 @@ body {
     min-height: 100vh;
     color: #000;
     overflow: hidden;
+    padding: 120px 25px 0;
+    // margin: 25px;
 }
 
 .body--active {
@@ -30,4 +32,16 @@ body {
 
 .wrapper {
     display: none;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 100px 15px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 90px 10px 0;
+    }
 }

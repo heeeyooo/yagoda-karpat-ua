@@ -1,8 +1,5 @@
 .burger-btn {
-    // position: fixed;
     position: relative;
-    // top: 40px;
-    // right: 50px;
     height: 0;
     width: 40px;
     padding: 20px 0;
@@ -12,10 +9,10 @@
 }
 
 .burger-btn::before {
-    position: absolute;
     content: "";
-    height: 3px;
-    border-radius: 1.5px;
+    position: absolute;
+    height: 2px;
+    border-radius: 1px;
     width: 100%;
     background: #000;
     transform: translateY(-10px);
@@ -27,13 +24,12 @@
 }
 
 .burger-btn::after {
-    position: absolute;
     content: "";
-    height: 3px;
-    border-radius: 1.5px;
+    position: absolute;
+    height: 2px;
+    border-radius: 1px;
     width: 100%;
     background: #000;
-
     transform: translateY(10px);
     transition: transform 0.3s;
 }
@@ -44,10 +40,10 @@
 
 .burger-btn__line {
     position: absolute;
-    height: 3px;
+    height: 2px;
     width: 100%;
     background: #000;
-    border-radius: 1.5px;
+    border-radius: 1px;
     opacity: 1;
     transition: all 0.3s;
 }
