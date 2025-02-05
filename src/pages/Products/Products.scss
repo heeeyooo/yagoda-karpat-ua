@@ -1,53 +1,65 @@
+@use "./../../mixins" as *;
+
 .products-container {
     min-height: 100vh;
-    padding: 50px 0 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
 }
 
 .products-main-info {
     font-size: clamp(26px, 3vw, 36px);
     font-weight: 700;
-    margin: 0;
-    padding-left: 25px;
 }
 
 .filter-title {
-    margin: 50px 0 0;
-    margin-left: 25px;
     font-size: 16px;
     font-weight: 700;
 }
 
-.search-input {
-    font-size: 16px;
-    width: calc(100% - 100px);
+.search-wrapper {
     height: 50px;
-    margin: 0 25px 25px;
-    padding: 10px 25px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    outline: none;
-    border: none;
     background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding-right: 5px;
     box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
         inset -1px -1px 0 rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
+}
+
+.search-input {
+    flex-grow: 1;
+    font-size: 1rem;
+    padding: 0 10px;
 }
 
 .search-input::placeholder {
     opacity: 0.5;
 }
 
-.search-input:focus {
+.search-wrapper:focus-within {
     box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1),
         inset -1px -1px 5px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 900px) {
+.search-icon {
+    @include grid-center;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    background: var(--color-dark);
+    border-radius: inherit;
+}
+
+@media (max-width: 900px) {
+    .products-container {
+        row-gap: 15px;
+    }
+
     .products-info {
         padding: 0 10px;
-    }
-    .products-container {
-        padding: 25px 0 0;
     }
     .products-main-info {
         padding-left: 10px;
@@ -56,8 +68,10 @@
     .filter-title {
         margin-left: 10px;
     }
-    .search-input {
-        width: calc(100% - 50px);
-        margin: 0 10px 25px;
+}
+
+@media (max-width: 600px) {
+    .products-container {
+        row-gap: 10px;
     }
 }

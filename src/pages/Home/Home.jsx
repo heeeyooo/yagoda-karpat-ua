@@ -44,7 +44,7 @@ const Home = () => {
                         та овочі
                     </p>
                 </div>
-                <a className="contact-us-btn" href="#section4">
+                <a className="home-contact-us-btn" href="#section4">
                     Зв'яжіться з нами
                 </a>
                 {/* <div className="home-container__product-wrapper">

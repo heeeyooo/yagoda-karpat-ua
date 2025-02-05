@@ -62,24 +62,33 @@ const Product = ({ product }) => {
     });
 
     return (
-        <div className="product-wrapper" id={id}>
-            <div className="product-container">
-                <div className="product-info-container">
-                    <a href={`#${id}`} className="product-name">
-                        {name}
-                    </a>
+        <div className="product">
+            <div className="product__img-wrapper">
+                <img className="product-img" src={productImages[0]} alt="" />
+                <div className="img-qty">
+                    {productImages.length}{" "}
+                    <i className="fa-solid fa-camera"></i>
+                </div>
+            </div>
+
+            <div className="product__info-container">
+                <div>
+                    <p className="product-name">{name}</p>
                     <p className="product__lat-name">{latName}</p>
-                    <ul className="product-list-info">
+                </div>
+                <button className="product__info-btn">More info</button>
+
+                {/* <ul className="product-list-info">
                         <li className="pack">Пакування: {pack}</li>
                         <li className="temp">Температура: {temp}</li>
                         <li className="origin">Походження: {origin}</li>
                         <li className="status">Статус: {status}</li>
-                    </ul>
-                    <a className="contact-us-btn product-btn" href="#section4">
-                        Дізнатися про наявність
-                    </a>
-                </div>
-                <Swiper
+                    </ul> */}
+                {/* <a className="contact-us-btn product-btn" href="#section4">
+                    Дізнатися про наявність
+                </a> */}
+            </div>
+            {/* <Swiper
                     grabCursor={true}
                     effect={"creative"}
                     creativeEffect={{
@@ -113,8 +122,7 @@ const Product = ({ product }) => {
                             </SwiperSlide>
                         );
                     })}
-                </Swiper>
-            </div>
+                </Swiper> */}
         </div>
     );
 };

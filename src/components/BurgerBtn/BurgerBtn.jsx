@@ -27,8 +27,10 @@ const BurgerBtn = () => {
         document.body.classList.toggle("body--active");
     }
     return (
-        <div onClick={setNav} className="burger-btn header--hide">
-            <div className="burger-btn__line"></div>
+        <div className="burger-btn__wrapper">
+            <div onClick={setNav} className="burger-btn header--hide">
+                <div className="burger-btn__line"></div>
+            </div>
         </div>
     );
 };

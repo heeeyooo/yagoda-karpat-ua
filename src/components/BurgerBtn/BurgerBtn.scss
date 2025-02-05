@@ -1,11 +1,20 @@
+@use "./../../mixins" as *;
+
+.burger-btn__wrapper {
+    background: var(--color-dark);
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    @include grid-center;
+    border-radius: inherit;
+}
+
 .burger-btn {
     position: relative;
     height: 0;
-    width: 40px;
-    padding: 20px 0;
+    width: 30px;
+    padding: 15px 0;
     cursor: pointer;
     z-index: 108;
-    transition: right 0.3s;
 }
 
 .burger-btn::before {

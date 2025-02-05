@@ -9,9 +9,9 @@
     background: rgba(255, 255, 255, 0.75);
     @include glass-effect;
     min-height: 70px;
-    padding: 0 25px;
+    padding: 0 10px;
     @include flex-between-center;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 .header__logo {
