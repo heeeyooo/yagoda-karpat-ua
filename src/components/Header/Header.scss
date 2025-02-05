@@ -2,58 +2,36 @@
 
 .header {
     position: fixed;
-    left: 25px;
-    right: 25px;
-    top: 0;
-    min-height: 100px;
-    padding: 0 140px 0 50px;
-    @include flex-between-center;
-    @include glass-effect;
-    border-radius: 0 0 25px 25px;
-    z-index: 108;
-    transition: all 0.3s;
-}
-
-.header--hide {
-    transform: translateY(-125px);
-}
-
-.header--active {
     top: 25px;
-    border-radius: 25px 25px 25px 25px;
-    background: rgba(255, 255, 255, 0.5);
+    right: 25px;
+    left: 25px;
+    z-index: 108;
+    background: rgba(255, 255, 255, 0.75);
+    @include glass-effect;
+    min-height: 70px;
+    padding: 0 25px;
+    @include flex-between-center;
+    border-radius: 25px;
 }
 
 .header__logo {
-    font-size: 26px;
-    color: #000;
+    font-size: 1.5rem;
 }
 
-.header-tel {
-    border: none;
-    background-color: transparent;
-    font-family: inherit;
-    color: #000;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
     .header {
-        left: 10px;
-        right: 10px;
-        padding: 0 25px;
+        top: 15px;
+        right: 15px;
+        left: 15px;
+        padding: 0 15px;
     }
+}
 
-    .header-tel {
-        display: none;
-    }
-
-    .header--hide {
-        transform: translateY(-110px);
-    }
-
-    .header--active {
+@media (max-width: 600px) {
+    .header {
         top: 10px;
+        right: 10px;
+        left: 10px;
+        padding: 0 10px;
     }
 }

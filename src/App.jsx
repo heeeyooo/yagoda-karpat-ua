@@ -1,4 +1,3 @@
-import BurgerBtn from "./components/BurgerBtn/BurgerBtn";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Loading from "./components/Loading/Loading";
@@ -15,7 +14,6 @@ function App() {
             <Loading />
             <div className="wrapper">
                 <Header />
-                <BurgerBtn />
                 <NavCurtain />
                 <Home />
                 <AboutUs />
