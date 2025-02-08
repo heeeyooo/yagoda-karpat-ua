@@ -16,7 +16,7 @@ const Contacts = () => {
 
     return (
         <>
-            <div className="contacts-container" id="section4">
+            <div className="contacts-container" id="contacts">
                 <h3 className="contacts-main-info">Контакти</h3>
                 <p className="contacts-info"></p>
                 <div className="contacts-icons-container">

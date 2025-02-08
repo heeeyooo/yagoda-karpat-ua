@@ -16,18 +16,13 @@ body {
     background: rgb(240, 240, 240);
     min-height: 100vh;
     color: #000;
-    overflow: hidden;
-    padding: 120px 25px 0;
-    // margin: 25px;
+    // overflow: hidden;
+    padding: 120px 25px 25px;
 }
 
 .body--active {
     height: 100% !important;
     overflow: hidden !important;
-}
-
-#root {
-    overflow-x: hidden;
 }
 
 .wrapper {
@@ -36,12 +31,12 @@ body {
 
 @media (max-width: 900px) {
     body {
-        padding: 100px 15px 0;
+        padding: 100px 10px 10px;
     }
 }
 
 @media (max-width: 600px) {
     body {
-        padding: 90px 10px 0;
+        padding: 90px 10px 10px;
     }
 }

@@ -30,7 +30,7 @@ const Products = () => {
     // });
 
     return (
-        <div className="products-container" id="section3">
+        <div className="products-container" id="products">
             <h3 className="products-main-info">Продукція</h3>
             <p className="filter-title">Фільтер</p>
             <div className="search-wrapper">

@@ -1,4 +1,3 @@
-import homeVideo from "./img/home-video.mp4";
 import { productsData } from "../../data/productsData";
 import "./../../components/Header/Header.scss";
 import "./../../components/BurgerBtn/BurgerBtn.scss";
@@ -25,15 +24,7 @@ const Home = () => {
     });
 
     return (
-        <div className="home-container js-home-container" id="section1">
-            {/* <video
-                className="home-video"
-                src={homeVideo}
-                autoPlay
-                loop
-                playsInline
-                muted
-            ></video> */}
+        <div className="home-container js-home-container" id="home">
             <div className="home-container__wrapper">
                 <div>
                     <h1 className="home-main-info">
