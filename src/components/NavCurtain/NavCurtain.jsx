@@ -1,168 +1,115 @@
+import { useEffect } from "react";
 import { productsData } from "../../data/productsData";
 import "./NavCurtain.scss";
 
 const NavCurtain = () => {
-    addEventListener("scroll", () => {
-        const links1 = document.querySelector(".home");
-        const links2 = document.querySelector(".about");
-        const links3 = document.querySelector(".products");
-        const links4 = document.querySelector(".contacts");
-        if (
-            document.querySelector("#section1").getBoundingClientRect().bottom >
-            200
-        ) {
-            links1.classList.add("active-link");
-            links2.classList.remove("active-link");
-            links3.classList.remove("active-link");
-            links4.classList.remove("active-link");
-        } else if (
-            document.querySelector("#section2").getBoundingClientRect().bottom >
-            200
-        ) {
-            links1.classList.remove("active-link");
-            links2.classList.add("active-link");
-            links3.classList.remove("active-link");
-            links4.classList.remove("active-link");
-        } else if (
-            document.querySelector("#section3").getBoundingClientRect().bottom >
-            200
-        ) {
-            links1.classList.remove("active-link");
-            links2.classList.remove("active-link");
-            links3.classList.add("active-link");
-            links4.classList.remove("active-link");
-        } else if (
-            document.querySelector("#section4").getBoundingClientRect().bottom >
-            200
-        ) {
-            links1.classList.remove("active-link");
-            links2.classList.remove("active-link");
-            links3.classList.remove("active-link");
-            links4.classList.add("active-link");
-        }
-    });
-    function closeMenu() {
-        const menu = document.querySelector(".menu");
-        document
-            .querySelector(".burger-btn")
-            .classList.remove("burger-btn--active");
-        document
-            .querySelector(".burger-btn__line")
-            .classList.remove("burger-btn__line--active");
-        menu.classList.remove("menu--active");
-        document.querySelector("#home").classList.remove("home--active");
-        document.querySelector("#about").classList.remove("about--active");
-        document
-            .querySelector("#products")
-            .classList.remove("products--active");
-        document
-            .querySelector("#contacts")
-            .classList.remove("contacts--active");
-        document.querySelector(".curtain").classList.remove("curtain--active");
-        document
-            .querySelector(".grid-container")
-            .classList.remove("grid-container--expand");
-    }
+    // addEventListener("scroll", () => {
+    //     const links1 = document.querySelector(".home");
+    //     const links2 = document.querySelector(".about");
+    //     const links3 = document.querySelector(".products");
+    //     const links4 = document.querySelector(".contacts");
+    //     if (
+    //         document.querySelector("#section1").getBoundingClientRect().bottom >
+    //         200
+    //     ) {
+    //         links1.classList.add("active-link");
+    //         links2.classList.remove("active-link");
+    //         links3.classList.remove("active-link");
+    //         links4.classList.remove("active-link");
+    //     } else if (
+    //         document.querySelector("#section2").getBoundingClientRect().bottom >
+    //         200
+    //     ) {
+    //         links1.classList.remove("active-link");
+    //         links2.classList.add("active-link");
+    //         links3.classList.remove("active-link");
+    //         links4.classList.remove("active-link");
+    //     } else if (
+    //         document.querySelector("#section3").getBoundingClientRect().bottom >
+    //         200
+    //     ) {
+    //         links1.classList.remove("active-link");
+    //         links2.classList.remove("active-link");
+    //         links3.classList.add("active-link");
+    //         links4.classList.remove("active-link");
+    //     } else if (
+    //         document.querySelector("#section4").getBoundingClientRect().bottom >
+    //         200
+    //     ) {
+    //         links1.classList.remove("active-link");
+    //         links2.classList.remove("active-link");
+    //         links3.classList.remove("active-link");
+    //         links4.classList.add("active-link");
+    //     }
+    // });
 
     function showProducts() {
         document
-            .querySelector(".grid-container")
-            .classList.toggle("grid-container--expand");
+            .querySelector(".nav-curtain__grid-dropdown")
+            .classList.toggle("nav-curtain__grid-dropdown--active");
         document
             .querySelector(".products-btn")
             .classList.toggle("products-btn--active");
     }
 
-    const blurLink = () => {
-        const menuBtn = document.querySelector(".menu");
-
-        document
-            .querySelector(".burger-btn")
-            .classList.remove("burger-btn--active");
-        document
-            .querySelector(".burger-btn__line")
-            .classList.remove("burger-btn__line--active");
-        menuBtn.classList.remove("menu--active");
-        document.querySelector("#home").classList.remove("home--active");
-        document.querySelector("#about").classList.remove("about--active");
-        document
-            .querySelector("#products")
-            .classList.remove("products--active");
-        document
-            .querySelector("#contacts")
-            .classList.remove("contacts--active");
-        document.querySelector(".curtain").classList.remove("curtain--active");
-        document
-            .querySelector(".grid-container")
-            .classList.remove("grid-container--expand");
-    };
-
-    const blurMiniLink = () => {
-        const menuBtn = document.querySelector(".menu");
-        document
-            .querySelector(".burger-btn")
-            .classList.remove("burger-btn--active");
-        document
-            .querySelector(".burger-btn__line")
-            .classList.remove("burger-btn__line--active");
-        menuBtn.classList.remove("menu--active");
-
-        document.querySelector("#home").classList.remove("home--active");
-        document.querySelector("#about").classList.remove("about--active");
-        document
-            .querySelector("#products")
-            .classList.remove("products--active");
-        document
-            .querySelector("#contacts")
-            .classList.remove("contacts--active");
-        document.querySelector(".curtain").classList.remove("curtain--active");
-        document
-            .querySelector(".grid-container")
-            .classList.remove("grid-container--expand");
-    };
+    useEffect(() => {
+        document.querySelectorAll(".js-link").forEach((link) => {
+            link.addEventListener("click", () => {
+                const burgerBtn = document.querySelector(".burger-btn");
+                const midLine = document.querySelector(".burger-btn__line");
+                const mobileMenu = document.querySelector(".nav-curtain");
+                burgerBtn.classList.remove("burger-btn--active");
+                midLine.classList.remove("burger-btn__line--active");
+                mobileMenu.classList.remove("nav-curtain--active");
+                document
+                    .querySelector(".curtain")
+                    .classList.remove("curtain--active");
+                // hide list of products in menu by clicking menu btn
+                document
+                    .querySelector(".nav-curtain__grid-dropdown")
+                    .classList.remove("nav-curtain__grid-dropdown--active");
+                document
+                    .querySelector(".products-btn")
+                    .classList.remove("products-btn--active");
+                document.body.classList.remove("body--hidden");
+            });
+        });
+    }, []);
 
     return (
         <>
-            <div className="curtain" onClick={closeMenu}></div>
-            <div className="menu">
+            <div className="curtain"></div>
+            <div className="nav-curtain">
                 <ul className="menu-link">
-                    <li id="home">
-                        <a
-                            className="home link active-link"
-                            onClick={blurLink}
-                            href="#section1"
-                        >
+                    <li>
+                        <a className="link js-link active-link" href="#home">
                             Головна
                         </a>
                     </li>
-                    <li id="about">
-                        <a
-                            className="about link"
-                            onClick={blurLink}
-                            href="#section2"
-                        >
+                    <li>
+                        <a className="link js-link" href="#about-us">
                             Про нас
                         </a>
                     </li>
-                    <li id="products" className="dropdown">
-                        <a
-                            className="products link"
-                            onClick={blurLink}
-                            href="#section3"
-                        >
-                            Продукція
-                        </a>
-                        <button className="products-btn" onClick={showProducts}>
-                            <i className="fa-solid fa-arrow-down"></i>
-                        </button>
-                        <div className="grid-container">
-                            <ul className="dropdown-content">
+                    <li>
+                        <div className="nav-curtain__products-link">
+                            <a className="link js-link" href="#products">
+                                Продукція
+                            </a>
+                            <button
+                                className="products-btn"
+                                onClick={showProducts}
+                            >
+                                +
+                            </button>
+                        </div>
+                        <div className="nav-curtain__grid-dropdown">
+                            <ul className="nav-curtain__dropdown">
                                 {productsData.map(({ id, name }) => {
                                     return (
                                         <li key={id}>
                                             <a
-                                                className="mini-link"
-                                                onClick={blurMiniLink}
+                                                className="js-link"
                                                 href={"#" + id}
                                             >
                                                 {name}
@@ -173,12 +120,8 @@ const NavCurtain = () => {
                             </ul>
                         </div>
                     </li>
-                    <li id="contacts">
-                        <a
-                            className="contacts link"
-                            onClick={blurLink}
-                            href="#section4"
-                        >
+                    <li>
+                        <a className="link js-link" href="#contacts">
                             Контакти
                         </a>
                     </li>

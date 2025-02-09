@@ -1,30 +1,28 @@
 import { productsData } from "../../data/productsData";
-import "./../../components/Header/Header.scss";
-import "./../../components/BurgerBtn/BurgerBtn.scss";
 import "./Home.scss";
 
 const Home = () => {
-    addEventListener("scroll", () => {
-        const homeContainer = document.querySelector(".js-home-container");
+    // addEventListener("scroll", () => {
+    //     const homeContainer = document.querySelector(".js-home-container");
 
-        let homeContainerRect = homeContainer.getBoundingClientRect().bottom;
-        if (homeContainerRect < 0) {
-            document.querySelector(".header").classList.add("header--active");
-            document
-                .querySelector(".burger-btn")
-                .classList.add("burger-btn--translate");
-        } else {
-            document
-                .querySelector(".header")
-                .classList.remove("header--active");
-            document
-                .querySelector(".burger-btn")
-                .classList.remove("burger-btn--translate");
-        }
-    });
+    //     let homeContainerRect = homeContainer.getBoundingClientRect().bottom;
+    //     if (homeContainerRect < 0) {
+    //         document.querySelector(".header").classList.add("header--active");
+    //         document
+    //             .querySelector(".burger-btn")
+    //             .classList.add("burger-btn--translate");
+    //     } else {
+    //         document
+    //             .querySelector(".header")
+    //             .classList.remove("header--active");
+    //         document
+    //             .querySelector(".burger-btn")
+    //             .classList.remove("burger-btn--translate");
+    //     }
+    // });
 
     return (
-        <div className="home-container js-home-container" id="home">
+        <div className="home js-home-container" id="home">
             <div className="home-container__wrapper">
                 <div>
                     <h1 className="home-main-info">

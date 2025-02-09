@@ -4,15 +4,15 @@ const BurgerBtn = () => {
     function toggleBurgerBtn() {
         const burgerBtn = document.querySelector(".burger-btn");
         const midLine = document.querySelector(".burger-btn__line");
-        const mobileMenu = document.querySelector(".menu");
+        const mobileMenu = document.querySelector(".nav-curtain");
         burgerBtn.classList.toggle("burger-btn--active");
         midLine.classList.toggle("burger-btn__line--active");
-        mobileMenu.classList.toggle("menu--active");
+        mobileMenu.classList.toggle("nav-curtain--active");
         document.querySelector(".curtain").classList.toggle("curtain--active");
         // hide list of products in menu by clicking menu btn
         document
-            .querySelector(".grid-container")
-            .classList.remove("grid-container--expand");
+            .querySelector(".nav-curtain__grid-dropdown")
+            .classList.remove("nav-curtain__grid-dropdown--active");
         document
             .querySelector(".products-btn")
             .classList.remove("products-btn--active");
