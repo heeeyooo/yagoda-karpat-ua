@@ -13,7 +13,7 @@ function App() {
         <>
             {/* <Loading /> */}
             <Header />
-            {/* <NavCurtain /> */}
+            <NavCurtain />
             <Home />
             <AboutUs />
             <Products />
