@@ -73,10 +73,10 @@ const Product = ({ product }) => {
 
             <div className="product__info-container">
                 <div>
-                    <p className="product-name">{name}</p>
                     <p className="product__lat-name">{latName}</p>
+                    <p className="product-name">{name}</p>
                 </div>
-                <button className="product__info-btn">More info</button>
+                <button className="product__info-btn">Детальніше</button>
 
                 {/* <ul className="product-list-info">
                         <li className="pack">Пакування: {pack}</li>

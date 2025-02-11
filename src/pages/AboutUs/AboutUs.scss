@@ -1,4 +1,4 @@
-.about-container {
+.about-us {
     min-height: 100vh;
     padding: 50px 25px 0;
     text-align: center;
@@ -6,9 +6,9 @@
 
 .about-main-info {
     text-align: right;
-    margin: 0;
     font-size: clamp(26px, 3vw, 36px);
     font-weight: 700;
+    padding-top: 120px;
 }
 
 .about-info {
@@ -39,11 +39,16 @@
 }
 
 @media screen and (max-width: 900px) {
-    .about-container {
+    .about-us {
         padding: 25px 10px 0;
     }
+
     .contacts-grid-container {
         flex-direction: column;
         row-gap: 50px;
+    }
+
+    .about-main-info {
+        padding-top: 90px;
     }
 }

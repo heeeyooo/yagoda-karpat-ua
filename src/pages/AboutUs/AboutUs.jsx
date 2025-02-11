@@ -91,7 +91,7 @@ const AboutUs = () => {
         started2 = true;
     }
     return (
-        <div className="about-container" id="about-us">
+        <div className="about-us" id="about-us">
             <h3 className="about-main-info">Про нас</h3>
             <p className="about-info">
                 Компанія Ягода Карпат спеціалізується на переробці та

@@ -10,6 +10,7 @@
 .products-main-info {
     font-size: clamp(26px, 3vw, 36px);
     font-weight: 700;
+    padding-top: 120px;
 }
 
 .filter-title {
@@ -25,9 +26,6 @@
     align-items: center;
     border-radius: 10px;
     padding-right: 5px;
-    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
-        inset -1px -1px 0 rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
 }
 
 .search-input {
@@ -38,11 +36,6 @@
 
 .search-input::placeholder {
     opacity: 0.5;
-}
-
-.search-wrapper:focus-within {
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1),
-        inset -1px -1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .search-icon {
@@ -63,6 +56,7 @@
     }
     .products-main-info {
         padding-left: 10px;
+        padding-top: 90px;
     }
 
     .filter-title {
