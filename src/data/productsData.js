@@ -16,7 +16,8 @@ import lingonberryImg from "./products-img/lingonberry.jpg";
 import lingonberryImg2 from "./products-img/lingonberry2.jpg";
 import rosehipImg from "./products-img/rosehip.jpg";
 import rosehipImg2 from "./products-img/rosehip2.jpg";
-import elderberryImg from "./products-img/elderberry.png";
+import elderberryImg from "./products-img/elderberry.jpg";
+import elderberryImg2 from "./products-img/elderberry2.png";
 import strawberryImg from "./products-img/strawberry.jpg";
 import strawberryImg2 from "./products-img/strawberry2.jpg";
 import raspberryImg from "./products-img/raspberry.jpg";
@@ -24,6 +25,7 @@ import raspberryImg2 from "./products-img/raspberry2.jpg";
 import raspberryImg3 from "./products-img/raspberry3.jpg";
 import plumImg from "./products-img/plum.jpg";
 import plumImg2 from "./products-img/plum2.jpg";
+import prunusImg from "./products-img/prunus.jpg";
 import apricotImg from "./products-img/apricot.jpg";
 import sweetPepperImg from "./products-img/sweet-pepper.jpg";
 import sweetPepperImg2 from "./products-img/sweet-pepper2.jpg";
@@ -41,6 +43,7 @@ import sourCherryImg2 from "./products-img/sour-cherry2.jpg";
 import honeyFungusImg from "./products-img/honey-fungus.jpg";
 import honeyFungusImg2 from "./products-img/honey-fungus2.jpg";
 import blackberryImg from "./products-img/blackberry.jpg";
+import blackberryImg2 from "./products-img/blackberry.jpg";
 
 const productsData = [
     {
@@ -48,7 +51,6 @@ const productsData = [
         type: "berry",
         name: "Чорниця",
         latName: "Vaccinium myrtillus",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
         pack: "паперовий мішок 25 кг",
         temp: "-21 °C",
         origin: "Україна",
@@ -62,7 +64,6 @@ const productsData = [
         type: "berry",
         name: "Брусниця",
         latName: "Vaccinium vitis-idaea",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
         pack: "паперовий мішок 25 кг",
         temp: "-21 °C",
         origin: "Україна",
@@ -76,7 +77,6 @@ const productsData = [
         type: "berry",
         name: "Шипшина",
         latName: "Rosa canina",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
         pack: "паперовий мішок 25 кг",
         temp: "-21 °C",
         origin: "Україна",
@@ -87,16 +87,41 @@ const productsData = [
         icon: rosehipIcon,
     },
     {
+        id: "plum",
+        type: "fruit",
+        name: "Слива",
+        latName: "Prúnus",
+        pack: "паперовий мішок 25 кг, картонна коробка 10 кг",
+        temp: "-21 °C",
+        origin: "Україна",
+        status: "заморожена",
+        productImages: [plumImg, plumImg2],
+        classSwiper: "my-swiper",
+        icon: plumIcon,
+    },
+    {
+        id: "plum-dry",
+        type: "fruit",
+        name: "Чорнослив",
+        latName: "Prúnus",
+        pack: "картонна коробка 10 кг",
+        temp: "-21 °C",
+        origin: "Україна",
+        status: "заморожена",
+        productImages: [prunusImg],
+        classSwiper: "my-swiper",
+        // icon: plumIcon,
+    },
+    {
         id: "elderberry",
         type: "berry",
         name: "Бузина чорна",
         latName: "Sambucus nigra",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
         pack: "паперовий мішок 25 кг",
         temp: "-21 °C",
         origin: "Україна",
         status: "заморожена",
-        productImages: [elderberryImg],
+        productImages: [elderberryImg, elderberryImg2],
         classSwiper: "my-swiper-1",
         icon: elderberryIcon,
     },
@@ -105,7 +130,6 @@ const productsData = [
         type: "berry",
         name: "Полуниця",
         latName: "Fragaria",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
         pack: "паперовий мішок 25 кг",
         temp: "-21 °C",
         origin: "Україна",
@@ -119,7 +143,6 @@ const productsData = [
         type: "berry",
         name: "Малина",
         latName: "Rúbus idáeus",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
         pack: "картонна коробка 10 кг",
         temp: "-21 °C",
         origin: "Україна",
@@ -129,25 +152,10 @@ const productsData = [
         icon: raspberryIcon,
     },
     {
-        id: "plum",
-        type: "fruit",
-        name: "Слива",
-        latName: "Prúnus",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
-        pack: "паперовий мішок 25 кг, картонна коробка 10 кг",
-        temp: "-21 °C",
-        origin: "Україна",
-        status: "заморожена",
-        productImages: [plumImg, plumImg2],
-        classSwiper: "my-swiper",
-        icon: plumIcon,
-    },
-    {
         id: "apricot",
         type: "fruit",
         name: "Абрикоса",
         latName: "Prunus armeniaca",
-        // info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?",
         pack: "картонна коробка 10 кг",
         temp: "-21 °C",
         origin: "Україна",
@@ -161,7 +169,6 @@ const productsData = [
         type: "vegetable",
         name: "Перець солодкий",
         latName: "Capsicum annuum",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
         pack: "картонна коробка 10 кг",
         temp: "-21 °C",
         origin: "Україна",
@@ -180,7 +187,6 @@ const productsData = [
         type: "mushroom",
         name: "Гриб білий",
         latName: "Boletus",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
         pack: "картонна коробка 10 кг",
         temp: "-21 °C",
         origin: "Україна",
@@ -200,7 +206,6 @@ const productsData = [
         type: "mushroom",
         name: "Гриб лисичка",
         latName: "Cantharēllus cibārius",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
         pack: "картонна коробка 10 кг",
         temp: "-21 °C",
         origin: "Україна",
@@ -214,7 +219,6 @@ const productsData = [
         type: "fruit",
         name: "Вишня",
         latName: "Prunus cerasus",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
         pack: "картонна коробка 10 кг",
         temp: "-21 °C",
         origin: "Україна",
@@ -228,7 +232,6 @@ const productsData = [
         type: "mushroom",
         name: "Гриб опеньок",
         latName: "Armillaria",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
         pack: "картонна коробка 10 кг",
         temp: "-21 °C",
         origin: "Україна",
@@ -242,12 +245,11 @@ const productsData = [
         type: "berry",
         name: "Ожина",
         latName: "Rubus caesius",
-        // info: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo enim, debitis fugit nulla voluptatum ab libero consequuntur veritatis ullam adipisci magnam quibusdam obcaecati quos rerum iste, temporibus dicta architecto et?`,
         pack: "картонна коробка 10 кг",
         temp: "-21 °C",
         origin: "Україна",
         status: "заморожена",
-        productImages: [blackberryImg],
+        productImages: [blackberryImg, blackberryImg2],
         classSwiper: "my-swiper-1",
         imgNone: "none",
     },

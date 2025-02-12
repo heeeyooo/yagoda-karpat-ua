@@ -70,7 +70,6 @@ const Product = ({ product }) => {
                     <i className="fa-solid fa-camera"></i>
                 </div>
             </div>
-
             <div className="product__info-container">
                 <div>
                     <p className="product__lat-name">{latName}</p>
