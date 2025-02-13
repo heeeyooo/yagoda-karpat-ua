@@ -1,16 +1,7 @@
 .contacts-main-info {
-    padding: 120px 25px 0;
+    padding: 120px 25px 25px;
     text-align: right;
     font-size: clamp(26px, 3vw, 36px);
-    font-weight: 700;
-    margin: 0;
-}
-
-.contacts-info {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    text-align: justify;
-    padding: 50px;
 }
 
 .contacts-icons-container {
@@ -18,6 +9,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: #fff;
+    border-radius: 10px;
 }
 
 .contact-icon {
@@ -25,23 +18,26 @@
 }
 
 .icon-container {
-    width: 100%;
     position: relative;
+    z-index: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     row-gap: 30px;
     text-align: center;
-    padding: 25px 25px;
+    padding: 25px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .icon-container::before {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 100%;
     height: 0;
-    background-color: var(--color-dark);
+    background: var(--color-dark);
     z-index: -1;
     transition: all 0.5s ease;
 }
@@ -50,101 +46,76 @@
     height: 100%;
 }
 
-.icon-container:hover i {
-    color: var(--color-light);
-}
-
-.icon-container:hover p {
-    color: var(--color-light);
-}
-
 .icon-container i {
     font-size: 30px;
-    color: var(--color-dark);
     transition: all 0.5s;
 }
 
 .icon-container p {
-    font-family: "Poppins", sans-serif;
     font-weight: 300;
     transition: all 0.5s;
 }
 
 .form-map-container {
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 25px;
     height: 600px;
+    margin-top: 25px;
 }
 
+// Form
+
 .form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     width: 50%;
-    padding: 0 50px;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    height: 100%;
+    padding: 25px;
     font-size: 16px;
+    background: white;
+    border-radius: 10px;
 }
 
 .form-info {
     font-size: clamp(20px, 3vw, 30px);
-    font-weight: 700;
+}
 
-    margin: 0;
-    font-family: "Corben", serif;
+.inputs__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
 }
 
 .input-container {
-    position: relative;
-}
-
-.form-submit-btn {
-    float: right;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    font-family: var(--secondary-font-family);
-    font-weight: 300;
-    cursor: pointer;
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    transition: all 0.15s;
-}
-
-.form-submit-btn:hover {
-    background-color: var(--color-active);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 5px;
 }
 
 .input1,
 .input2,
 .input3 {
-    margin: 10px 0;
-    background-color: var(--color-light);
-    padding: 20px 25px;
     width: 100%;
-    border: none;
-    height: 50px;
+    padding: 10px;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--color-dark);
-    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
-        inset -1px -1px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
 }
 
 .input4 {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 1rem;
     resize: none;
-    margin: 10px 0;
-    background-color: var(--color-light);
-    padding: 20px 25px;
     width: 100%;
-    border: none;
+    padding: 10px;
     border-radius: 10px;
-    height: 200px;
-    color: var(--color-dark);
-    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
-        inset -1px -1px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
 }
 
@@ -152,55 +123,81 @@
 .input2:focus,
 .input3:focus,
 .input4:focus {
+    color: rgb(0, 0, 0);
     outline: none;
-    color: var(--color-dark);
-    font-size: 16px;
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1),
-        inset -1px -1px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
 }
 
-.label1,
-.label2,
-.label3,
-.label4 {
-    position: absolute;
-    left: 25px;
-    transform: translateY(22px);
-    background-color: transparent;
-    padding: 0 3px;
+.form-submit-btn {
+    position: relative;
     z-index: 1;
-    transition: all 0.3s;
-    cursor: text;
-    font-weight: 300;
-    color: var(--color-dark);
+    align-self: flex-end;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: var(--secondary-font-family);
 }
 
-.label-focus {
+.form-submit-btn::before {
+    content: "";
     position: absolute;
-    left: 25px;
-    background-color: transparent;
-    transform: translateY(-2px);
-    top: 0;
-    z-index: 1;
-    transition: all 0.3s;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    background: var(--color-dark);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
+.form-submit-btn:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.google-map__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 50%;
+    height: 100%;
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.google-map__title {
+    font-size: clamp(20px, 3vw, 30px);
 }
 
 .location-map {
-    width: 50%;
-    height: 100%;
-    border: none;
+    flex-grow: 1;
+    width: 100%;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 900px) {
     .form {
-        padding: 25px;
+        padding: 10px;
     }
+
     .contacts-main-info {
         padding: 90px 25px 0;
     }
 
     .contacts-info {
         padding: 0 25px;
+    }
+
+    .form-map-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 600px;
+        margin-top: 10px;
     }
 }
 
@@ -211,16 +208,23 @@
     }
     .location-map {
         width: 100%;
-        height: 50%;
+        height: 100%;
     }
 
     .form {
         width: 100%;
         height: 50%;
-        box-sizing: border-box;
     }
 
     .contacts-info {
         font-size: 14px;
+    }
+
+    .google-map__wrapper {
+        width: 100%;
+        height: 50%;
+        padding: 10px;
+        background: #fff;
+        border-radius: 10px;
     }
 }

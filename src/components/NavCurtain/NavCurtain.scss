@@ -26,6 +26,7 @@
     font-size: clamp(26px, 3vw, 36px);
     font-weight: 500;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .link::before {
@@ -39,7 +40,6 @@
     transform: scaleY(0);
     transform-origin: bottom;
     background: var(--color-dark);
-    border-radius: 10px;
     transition: transform 0.3s ease-out;
 }
 
@@ -126,7 +126,7 @@
 
 .nav-curtain__dropdown {
     overflow: hidden;
-    padding: 0 10px;
+    padding: 0 35px;
 
     li {
         margin: 5px 0;
@@ -143,5 +143,9 @@
 @media (max-width: 900px) {
     .nav-curtain {
         padding: 90px 20px 0;
+    }
+
+    .nav-curtain__dropdown {
+        padding: 0 20px;
     }
 }

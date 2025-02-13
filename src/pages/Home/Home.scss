@@ -13,11 +13,10 @@
     position: relative;
     height: calc(100svh - 145px);
     @include flex-center;
-    flex-direction: column;
     background: rgba(255, 255, 255, 0.75);
     @include glass-effect;
     border-radius: 10px;
-    padding: 0 10px;
+    padding: 25px;
 }
 
 .home-container__product-wrapper {
@@ -71,15 +70,11 @@
 }
 
 .home-main-info {
-    font-weight: 900;
     font-size: clamp(26px, 3vw, 36px);
-    margin: 0;
 }
 
 .home-info {
-    font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-size: 16px;
 }
 
 .home-contact-us-btn {
@@ -87,6 +82,8 @@
     right: 25px;
     bottom: 25px;
     padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .home-contact-us-btn::before {
@@ -97,7 +94,7 @@
     z-index: -1;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+
     transform: scaleX(0);
     background: var(--color-dark);
     transform-origin: bottom right;
@@ -116,7 +113,7 @@
 
     .home-container__wrapper {
         height: calc(100svh - 100px);
-        padding: 0 10px;
+        padding: 10px;
     }
 
     .home-container__product-wrapper {
@@ -124,6 +121,11 @@
         left: 25px;
         right: 25px;
         height: 75px;
+    }
+
+    .home-contact-us-btn {
+        right: 10px;
+        bottom: 10px;
     }
 }
 
