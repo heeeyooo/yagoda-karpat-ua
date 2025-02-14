@@ -8,9 +8,9 @@
 }
 
 .products-main-info {
-    font-size: clamp(26px, 3vw, 36px);
-    font-weight: 700;
-    padding-top: 120px;
+    padding: 120px 25px 25px;
+    text-align: right;
+    font-size: clamp(2rem, 6vw, 3rem);
 }
 
 .filter-title {
@@ -55,8 +55,7 @@
         padding: 0 10px;
     }
     .products-main-info {
-        padding-left: 10px;
-        padding-top: 90px;
+        padding: 90px 10px 10px;
     }
 
     .filter-title {

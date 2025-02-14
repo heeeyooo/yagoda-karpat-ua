@@ -80,7 +80,7 @@
         justify-self: flex-start;
 
         a {
-            transition: color 0.3s;
+            transition: color 0.15s;
 
             &:hover {
                 color: var(--color-dark);
@@ -102,7 +102,7 @@
 .creator-link {
     position: relative;
     z-index: 1;
-    transition: color 0.3s;
+    transition: color 0.15s;
 
     &:hover {
         color: var(--color-dark);

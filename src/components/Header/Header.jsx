@@ -5,7 +5,7 @@ const Header = () => {
     let lastScrollTop = 0;
     addEventListener("scroll", () => {
         let scrollTop = document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop && scrollTop > window.innerHeight + 100) {
+        if (scrollTop > lastScrollTop && scrollTop > window.innerHeight) {
             document.querySelector(".header").classList.add("header--hide");
         } else {
             document.querySelector(".header").classList.remove("header--hide");

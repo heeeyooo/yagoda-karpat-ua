@@ -1,7 +1,9 @@
+@use "./../../mixins" as *;
+
 .contacts-main-info {
     padding: 120px 25px 25px;
     text-align: right;
-    font-size: clamp(26px, 3vw, 36px);
+    font-size: clamp(2rem, 6vw, 3rem);
 }
 
 .contacts-icons-container {
@@ -184,7 +186,7 @@
     }
 
     .contacts-main-info {
-        padding: 90px 25px 0;
+        padding: 90px 10px 10px;
     }
 
     .contacts-info {
@@ -192,12 +194,14 @@
     }
 
     .form-map-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         gap: 10px;
         height: 600px;
         margin-top: 10px;
+    }
+
+    .google-map__wrapper {
+        padding: 10px;
     }
 }
 

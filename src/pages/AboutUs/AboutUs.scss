@@ -1,14 +1,12 @@
 .about-us {
     min-height: 100vh;
-    padding: 50px 25px 0;
     text-align: center;
 }
 
 .about-main-info {
+    padding: 120px 25px 25px;
     text-align: right;
-    font-size: clamp(26px, 3vw, 36px);
-    font-weight: 700;
-    padding-top: 120px;
+    font-size: clamp(2rem, 6vw, 3rem);
 }
 
 .about-info {
@@ -39,16 +37,12 @@
 }
 
 @media screen and (max-width: 900px) {
-    .about-us {
-        padding: 25px 10px 0;
-    }
-
     .contacts-grid-container {
         flex-direction: column;
         row-gap: 50px;
     }
 
     .about-main-info {
-        padding-top: 90px;
+        padding: 90px 10px 10px;
     }
 }
